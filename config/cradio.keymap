@@ -50,7 +50,7 @@
 		key-positions = <30 31>;
 		bindings = <&sl INCO>;
 		};
-    }    
+    };    
 
     keymap {
         compatible = "zmk,keymap";
