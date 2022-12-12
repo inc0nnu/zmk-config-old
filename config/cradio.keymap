@@ -66,10 +66,10 @@
 
         sym1_layer {
             bindings = <
- &kp LBRC          &kp AT  &kp HASH  &kp LPAR  &kp LBKT  &kp PLUS  &kp MINUS  &kp COLON  &kp SEMICOLON  &kp PERCENTAGE
-   &kp N1          &kp N2    &kp N3    &kp N4    &kp N5    &kp N6     &kp N7     &kp N8         &kp N9          &kp N0
- &kp RBRC  &kp LS(LA(N2))  &kp AMPS  &kp RPAR  &kp RBKT  &kp STAR  &kp EQUAL    &kp SQT        &kp DQT       &kp SLASH
-                                       &trans    &trans    &trans     &trans
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&trans  &trans  &trans  &trans
             >;
         };
 
