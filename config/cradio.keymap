@@ -1,27 +1,25 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
 // Layer definitions
-    #define BASE 0
-    #define SYM1 1
-    #define NAV 2
-    #define SYM2 3
-    #define INCO 4
+#define BASE 0
+#define SYM1 1
+#define NAV 2
+#define SYM2 3
+#define INCO 4
 // -----------------
-
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
 };
 
 &mt {
-   //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+    //  flavor = "tap-preferred";
+    // tapping_term_ms = <200>;
 };
 
 &sk {
@@ -33,9 +31,9 @@
 };
 
 / {
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <SYM1 NAV>;
             then-layer = <SYM2>;
@@ -44,57 +42,62 @@
 
     combos {
         compatible = "zmk,combos";
-	// both left thumb keys
-	combo_settings {
-		timeout-ms = <150>;
-		key-positions = <30 31>;
-		bindings = <&sl INCO>;
-		};
-    };    
+
+        // both left thumb keys
+
+        combo_settings {
+            timeout-ms = <150>;
+            key-positions = <30 31>;
+            bindings = <&sl 4>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
-		&kp Q &kp W &kp E &kp R &kp T              &kp Y &kp U  &kp I     &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G              &kp H &kp J  &kp K     &kp L   &kp EXCLAMATION
-		&kp Z &kp X &kp C &kp V &kp B              &kp N &kp M  &kp COMMA &kp DOT &kp QUESTION
-                                        &sl NAV &kp SPACE &sk LSHIFT &sl SYM1
+  &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O            &kp P
+  &kp A   &kp S   &kp D   &kp F      &kp G       &kp H   &kp J      &kp K    &kp L  &kp EXCLAMATION
+  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT     &kp QUESTION
+                          &sl 2  &kp SPACE  &sk LSHIFT   &sl 1
             >;
         };
 
         sym1_layer {
             bindings = <
-            	&kp LBRC  &kp AT         &kp HASH   &kp LPAR   &kp LBKT          &kp PLUS    &kp MINUS &kp COLON &kp SEMICOLON &kp PERCENTAGE
-            	&kp N1    &kp N2         &kp N3     &kp N4     &kp N5            &kp N6      &kp N7    &kp N8    &kp N9        &kp N0
-           	&kp RBRC  &kp LS(LA(N2)) &kp AMPS   &kp RPAR   &kp RBKT          &kp STAR    &kp EQUAL &kp SQT   &kp DQT       &kp SLASH
-                                                        &trans     &trans    &trans &trans
+ &kp LBRC          &kp AT  &kp HASH  &kp LPAR  &kp LBKT  &kp PLUS  &kp MINUS  &kp COLON  &kp SEMICOLON  &kp PERCENTAGE
+   &kp N1          &kp N2    &kp N3    &kp N4    &kp N5    &kp N6     &kp N7     &kp N8         &kp N9          &kp N0
+ &kp RBRC  &kp LS(LA(N2))  &kp AMPS  &kp RPAR  &kp RBKT  &kp STAR  &kp EQUAL    &kp SQT        &kp DQT       &kp SLASH
+                                       &trans    &trans    &trans     &trans
             >;
         };
 
         nav_layer {
             bindings = <
-            &kp ESC     &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE) &kp LG(LC(SPACE))     &kp LA(DEL)  &kp LG(LBKT) &kp UP   &kp LG(RBKT) &caps_word
-            &sk LSHIFT  &sk LCTRL   &sk LALT     &sk LGUI      &none                 &kp HOME     &kp LEFT     &kp DOWN &kp RIGHT    &kp END
-            &kp LG(Z)   &kp LG(X)   &kp LG(C)    &kp LG(V)     &kp LC(B)             &kp LALT(BACKSPACE) &BACKSPACE &kp LS(TAB)  &kp TAB  &none
-                                             &trans     &trans         &kp ENTER     &trans
+    &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))          &kp LA(DEL)   &kp LG(LBKT)       &kp UP  &kp LG(RBKT)  &caps_word
+ &sk LSHIFT      &sk LCTRL     &sk LALT       &sk LGUI              &none             &kp HOME       &kp LEFT     &kp DOWN     &kp RIGHT     &kp END
+  &kp LG(Z)      &kp LG(X)    &kp LG(C)      &kp LG(V)          &kp LG(B)  &kp LALT(BACKSPACE)  &kp BACKSPACE  &kp LS(TAB)       &kp TAB       &none
+                                                &trans             &trans            &kp ENTER         &trans
+
             >;
         };
 
         sym2_layer {
-	    bindings = <
-	    &none &none &none &none &none        &kp CARET &kp UNDERSCORE &kp TILDE &none &none
-	    &none &none &kp BACKSLASH &kp PIPE &none        &none &none &none &none &none
-	    &none &none &none &kp DOLLAR &none        &none &none &none &none &none
-				  &trans &trans        &trans &trans
-            >;
-	};
-	settings_layer {
             bindings = <
-            &bootloader    &none     &none     &none    &none    &none    &none    &none     &none      &bootloader
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5   &none   &none     &none     &bt BT_CLR
-	    &none &none &none &none &none                                      &none &none &none &none &none
-                                             &trans     &trans         &trans     &trans
+ &kp LA(N)  &kp LA(GRAVE)      &kp LA(E)   &kp LA(U)         &kp LA(I)  &kp CARET     &kp UNDERSCORE  &kp TILDE                  &none   &none
+     &none          &none  &kp BACKSLASH    &kp PIPE             &none      &none  &kp LA(BACKSLASH)      &none  &kp LS(LA(BACKSLASH))   &none
+     &none          &none          &none  &kp DOLLAR  &kp LA(NUMBER_0)      &none              &none  &kp GRAVE                  &none   &none
+                                              &trans            &trans     &trans             &trans
+            >;
+        };
+
+        settings_layer {
+            bindings = <
+  &bootloader         &none         &none         &none         &none         &none   &none   &none   &none  &bootloader
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5   &none   &none   &none   &bt BT_CLR
+        &none         &none         &none         &none         &none         &none   &none   &none   &none        &none
+                                                 &trans        &trans        &trans  &trans
             >;
         };
     };
