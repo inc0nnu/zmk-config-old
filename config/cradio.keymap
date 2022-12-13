@@ -57,38 +57,38 @@
 
         default_layer {
             bindings = <
-  &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O            &kp P
-  &kp A   &kp S   &kp D   &kp F      &kp G       &kp H   &kp J      &kp K    &kp L  &kp EXCLAMATION
-  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT     &kp QUESTION
+  &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O  &kp BACKSPACE
+  &kp A   &kp S   &kp D   &kp F      &kp G       &kp H   &kp J      &kp K    &kp L  &kp P
+  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp ENTER
                           &sl NAV  &kp SPACE  &sk LSHIFT   &sl SYM1
             >;
         };
 
         sym1_layer {
             bindings = <
-&kp LBRC   &kp AT   &kp HASH   &kp LPAR   &kp LBKT   &kp PLUS   &kp MINUS   &kp COLON   &kp SEMICOLON   &kp PERCENT
-&kp N1     &kp N2   &kp N3     &kp N4     &kp N5     &kp N6     &kp N7      &kp N8      &kp N9          &kp N0
-&kp RBRC  &kp LS(LA(N2))  &kp AMPS  &kp RPAR  &kp RBKT  &kp STAR  &kp EQUAL    &kp SQT        &kp DQT       &kp SLASH
+&kp EXCLAMATION   &kp AT         &kp HASH  &kp LPAR  &kp LBKT  &kp PLUS  &kp MINUS   &kp COLON   &kp SEMICOLON  &kp PERCENT
+&kp N1            &kp N2           &kp N3    &kp N4  &kp N5    &kp N6    &kp N7      &kp N8      &kp N9         &kp N0
+&kp QUESTION      &kp LS(LA(N2)) &kp AMPS  &kp RPAR  &kp RBKT  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp SLASH
 &trans  &trans  &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-    &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))          &kp LA(DEL)   &kp LG(LBKT)       &kp UP  &kp LG(RBKT)  &caps_word
- &sk LSHIFT      &sk LCTRL     &sk LALT       &sk LGUI              &none             &kp HOME       &kp LEFT     &kp DOWN     &kp RIGHT     &kp END
-  &kp LG(Z)      &kp LG(X)    &kp LG(C)      &kp LG(V)          &kp LG(B)  &kp LA(BACKSPACE)  &kp BACKSPACE  &kp LS(TAB)       &kp TAB       &none
-                                                &trans             &trans            &kp ENTER         &trans
+    &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
+ &sk LSHIFT      &sk LCTRL     &sk LALT       &sk LGUI              &none             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp END
+  &kp LG(Z)      &kp LG(X)    &kp LG(C)      &kp LG(V)          &kp LG(B)          &caps_word         &HOME    &kp LS(TAB) &kp END      &kp TAB
+                                                &trans             &trans           &kp ENTER        &trans
 
             >;
         };
 
         sym2_layer {
             bindings = <
- &kp LA(N)  &kp LA(GRAVE)      &kp LA(E)   &kp LA(U)         &kp LA(I)  &kp CARET     &kp UNDERSCORE  &kp TILDE                  &none   &none
-     &none          &none  &kp BACKSLASH    &kp PIPE             &none      &none  &kp LA(BACKSLASH)      &none  &kp LS(LA(BACKSLASH))   &none
-     &none          &none          &none  &kp DOLLAR        &kp LA(N0)      &none              &none  &kp GRAVE                  &none   &none
-                                              &trans            &trans     &trans             &trans
+ &kp LA(N)  &kp LA(GRAVE)      &kp LA(E)   &kp LA(U)     &kp LA(I)     &kp CARET     &kp UNDERSCORE  &kp TILDE                  &none   &none
+     &LBRC          &none  &kp BACKSLASH    &kp PIPE         &none         &none  &kp LA(BACKSLASH)      &none  &kp LS(LA(BACKSLASH))   &none
+     &RBRC          &none          &none  &kp DOLLAR    &kp LA(N0)         &none              &none  &kp GRAVE                  &none   &none
+                                              &trans        &trans        &trans             &trans
             >;
         };
 
