@@ -76,8 +76,8 @@
         nav_layer {
             bindings = <
     &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
- &sk LSHIFT      &sk LCTRL     &sk LALT       &sk LGUI              &none             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp END
-  &kp LG(Z)      &kp LG(X)    &kp LG(C)      &kp LG(V)          &kp LG(B)          &caps_word         &HOME    &kp LS(TAB) &kp END      &kp TAB
+ &sk LSHIFT      &sk LCTRL     &sk LALT       &sk LGUI              &none             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &none
+  &kp LG(Z)      &kp LG(X)    &kp LG(C)      &kp LG(V)          &kp LG(B)          &caps_word         &kp HOME    &kp LS(TAB) &kp END      &kp TAB
                                                 &trans             &trans           &kp ENTER        &trans
 
             >;
