@@ -80,7 +80,7 @@
     &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
  &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &kp ENTER             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
   &none      &none    &kp LG(LS(N4))      &kp LG(LC(LS(N4)))          &kp C_MUTE          &caps_word         &kp HOME    &none   &kp END      &kp TAB
-                                                &trans             &trans           &trans        &trans
+                                                &trans             &kp LSHIFT           &trans        &trans
 
             >;
         };
