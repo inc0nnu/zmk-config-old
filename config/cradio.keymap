@@ -36,7 +36,6 @@
 / {
    conditional_layers {
         compatible = "zmk,conditional-layers";
-
         tri_layer {
             if-layers = <SYM1 NAV>;
             then-layer = <SYM2>;
@@ -90,7 +89,7 @@
             bindings = <
  &kp LA(N)  &kp LA(GRAVE)      &kp LA(E)   &kp LA(U)     &kp LA(I)     &kp CARET     &kp UNDERSCORE  &kp TILDE                  &none   &trans
      &none          &kp LBRC  &kp LBKT    &none         &none         &none  &kp LA(BACKSLASH)      &none  &kp LS(LA(BACKSLASH))   &none
-     &none        &kp RBRC &RBKT  &kp DOLLAR    &kp LA(N0)         &none              &none  &kp GRAVE                  &none   &kp BACKSLASH
+     &none        &kp RBRC &kp RBKT  &kp DOLLAR    &kp LA(N0)         &none              &none  &kp GRAVE                  &none   &kp BACKSLASH
                                               &trans        &trans        &trans             &trans
             >;
         };
