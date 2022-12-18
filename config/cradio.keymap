@@ -61,7 +61,7 @@
         default_layer {
             bindings = <
   &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O  &kp BACKSPACE
-  &kp A   &kp S   &kp D   &kp F      &kp G       &kp H   &kp J      &kp K    &kp L  &kp P
+  &mt LC(LS(LALT)) A   &mt LCTRL S   &mt LALT D   &mt LGUI F      &mt LSHIFT G       &mt RSHIFT H   &mt RGUI J   &mt RALT K    &mt RCTRL L  &mt RC(RS(RALT)) P
   &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp TAB
                           &mo SYM1  &mt LSHIFT SPACE  &mt RSHIFT ENTER   &mo NAV
             >;
@@ -69,18 +69,18 @@
 
         sym1_layer {
             bindings = <
-&kp EXCLAMATION   &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT  &kp PLUS  &kp MINUS   &kp COLON   &kp SEMICOLON  &trans
-&kp N1            &kp N2           &kp N3    &kp N4  &kp N5    &kp N6    &kp N7      &kp N8      &kp N9         &kp N0
-&kp GRAVE   &kp LS(LA(N2)) &kp PIPE  &kp RPAR  &kp AMPS  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp SLASH
+&kp EXCLAMATION   &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp COLON  &kp SEMICOLON  &trans
+&mt LC(LS(LALT)) N1   &mt LCTRL N2    &mt LALT N3    &mt LGUI N4  &mt LSHIFT N5    &mt RSHIFT N6    &mt RGUI N7   &mt RALT N8  &mt RCTRL N9  &mt RC(RS(RALT)) N0
+&kp GRAVE   &kp LS(LA(N2)) &kp SLASH  &kp MINUS &kp PLUS  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp QUESTION
 &trans  &trans  &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-    &kp ESC  &kp LG(GRAVE)  &kp LG(TAB)  &kp LG(SPACE)  &kp LG(LC(SPACE))         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
- &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &kp ENTER             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
-  &none      &none    &kp LG(LS(N4))      &kp LG(LC(LS(N4)))          &kp C_MUTE          &caps_word         &kp HOME    &none   &kp END      &kp TAB
+    &kp ESC  &kp F2 &kp LS(LG(N4))   &kp LS(LC(LG(N4)))  &none         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
+ &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &kp LSHIFT             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
+  &none      &none    &none  &none          &kp C_MUTE          &caps_word         &kp HOME    &none   &kp END      &kp TAB
                                                 &trans             &kp LSHIFT           &trans        &trans
 
             >;
