@@ -1,5 +1,6 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
+// my original planck layout
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -61,16 +62,16 @@
             bindings = <
   &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O  &kp BACKSPACE
   &kp A   &kp S   &kp D   &kp F      &kp G       &kp H   &kp J      &kp K    &kp L  &kp P
-  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp QUESTION
-                          &mo NAV  &kp SPACE  &sk LSHIFT   &mo SYM1
+  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp TAB
+                          &mo SYM1  &mt LSHIFT SPACE  &mt RSHIFT ENTER   &mo NAV
             >;
         };
 
         sym1_layer {
             bindings = <
-&kp EXCLAMATION   &kp AT         &kp HASH  &kp LPAR  &kp PERCENT  &kp PLUS  &kp MINUS   &kp COLON   &kp SEMICOLON  &trans
+&kp EXCLAMATION   &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT  &kp PLUS  &kp MINUS   &kp COLON   &kp SEMICOLON  &trans
 &kp N1            &kp N2           &kp N3    &kp N4  &kp N5    &kp N6    &kp N7      &kp N8      &kp N9         &kp N0
-&none   &kp LS(LA(N2)) &kp PIPE  &kp RPAR  &kp AMPS  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp SLASH
+&kp GRAVE   &kp LS(LA(N2)) &kp PIPE  &kp RPAR  &kp AMPS  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp SLASH
 &trans  &trans  &trans  &trans
             >;
         };
