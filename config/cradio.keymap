@@ -61,7 +61,7 @@
         default_layer {
             bindings = <
   &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O  &kp BACKSPACE
-  &mt LC(LS(LALT)) A   &mt LCTRL S   &mt LALT D   &mt LGUI F      &mt LSHIFT G       &mt RSHIFT H   &mt RGUI J   &mt RALT K    &mt RCTRL L  &mt RC(RS(RALT)) P
+  &mt LC(LS(LALT)) A   &mt LCTRL S   &mt LALT D   &mt LGUI F      &mt LSHIFT G       &mt RSHIFT H   &mt RGUI J   &mt RALT K    &mt RCTRL L  &mt RC(RS(RALT)) P
   &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp TAB
                           &mo SYM1  &mt LSHIFT SPACE  &mt RSHIFT ENTER   &mo NAV
             >;
@@ -79,7 +79,7 @@
         nav_layer {
             bindings = <
     &kp ESC  &kp F2 &kp LS(LG(N4))   &kp LS(LC(LG(N4)))  &none         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
- &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &kp LSHIFT             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
+ &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &sk LSHIFT             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
   &none      &none    &none  &none          &kp C_MUTE          &caps_word         &kp HOME    &none   &kp END      &kp TAB
                                                 &trans             &kp LSHIFT           &trans        &trans
 
@@ -88,7 +88,7 @@
 «{[(<
         sym2_layer {
             bindings = <
-    &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp CARET &kp UNDERSCORE  &kp TILDE  &none    &trans
+    &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp CARET &kp PIPE  &kp TILDE  &none    &trans
     &kp LA(BACKSLASH) &kp LBRC       &kp LBKT      &kp LPAR       &kp LT        &kp GT    &kp RPAR        &kp RBKT   &kp RBRC &kp LS(LA(BACKSLASH))
     &none             &none          &kp BACKSLASH &kp UNDERSCORE &kp LA(N0)    &none     &none           &none      &none    &none 
                                               &trans        &trans        &trans             &trans
