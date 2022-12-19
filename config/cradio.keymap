@@ -85,12 +85,12 @@
 
             >;
         };
-
+«{[(<
         sym2_layer {
             bindings = <
- &kp LA(N)  &kp LA(GRAVE)      &kp LA(E)   &kp LA(U)     &kp LA(I)     &kp CARET     &kp UNDERSCORE  &kp TILDE                  &none   &trans
-     &none          &kp LBRC  &kp LBKT    &none         &none         &none  &kp LA(BACKSLASH)      &none  &kp LS(LA(BACKSLASH))   &none
-     &none        &kp RBRC &kp RBKT  &kp DOLLAR    &kp LA(N0)         &none              &none  &kp GRAVE                  &none   &kp BACKSLASH
+    &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp CARET &kp UNDERSCORE  &kp TILDE  &none    &trans
+    &kp LA(BACKSLASH) &kp LBRC       &kp LBKT      &kp LPAR       &kp LT        &kp GT    &kp RPAR        &kp RBKT   &kp RBRC &kp LS(LA(BACKSLASH))
+    &none             &none          &kp BACKSLASH &kp UNDERSCORE &kp LA(N0)    &none     &none           &none      &none    &none 
                                               &trans        &trans        &trans             &trans
             >;
         };
