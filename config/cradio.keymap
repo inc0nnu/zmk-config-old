@@ -85,7 +85,7 @@
 
             >;
         };
-«{[(<
+
         sym2_layer {
             bindings = <
     &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp CARET &kp PIPE  &kp TILDE  &none    &trans
