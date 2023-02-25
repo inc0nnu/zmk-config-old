@@ -95,7 +95,7 @@
         right_layer {
             bindings = <
              &kp TILDE         &kp RBRC        &kp RBKT  &kp RPAR   &BSLH         &kp LA(DEL)  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)  &kp F2
-             HRML (&kp GRAVE,  &kp LBRC        &kp LBKT  &kp LPAR   &FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
+             HRML (GRAVE,  LBRC,        LBKT,  LPAR)   &kp FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
              &kp LT            &kp LS(LA(N2))  &kp GT    &kp UNDER  &kp PIPE	  &kp CAPS     &kp HOME       &kp LA(BSLH)  &kp END       &kp LS(LA(BSLH))
                                                    &trans   &mt LSHIFT SPACE      &trans       &trans
 
