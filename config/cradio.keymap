@@ -1,18 +1,21 @@
 // Copyright (c) 2022 The ZMK Contributors
-// SPDX-License-Identifier: MIT
-// my original planck layout
+// SPDX-License-identifier: MIT
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+// Home row mods macro
+#define HRML(k1,k2,k3,k4) &ht LC(LS(LALT)) k1 &ht LCTRL k2 &ht LALT k3 &ht LGUI k4
+#define HRMR(k2,k3,k4,k5) &ht RGUI k2  &ht LALT k3 &ht RCTRL k4 &ht RC(RS(RALT)) k5
 
 // Layer definitions
-#define BASE 0
-#define SYM1 1
-#define NAV  2
-#define SYM2 3
-#define INCO 4
-// -----------------
+#define QWRT 0
+#define LEF 1
+#define RIG  2
+#define TRI 3
+#define RES 4
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -35,11 +38,24 @@
 };
 
 / {
+    behaviors {
+      ht: hold_tap {
+          label = "hold_tap";
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <150>;
+          global-quick-tap;
+          bindings = <&kp>, <&kp>;
+      };
+    };
+
    conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <SYM1 NAV>;
-            then-layer = <SYM2>;
+            if-layers = <LEF RIG>;
+            then-layer = <TRI>;
         };
     };
 
@@ -51,56 +67,56 @@
         combo_settings {
             timeout-ms = <150>;
             key-positions = <30 31>;
-            bindings = <&sl INCO>;
+            bindings = <&kp SPACE>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
-        default_layer {
+        
+	default_layer {
             bindings = <
-  &kp Q   &kp W   &kp E   &kp R      &kp T       &kp Y   &kp U      &kp I    &kp O  &kp BACKSPACE
-  &mt LC(LS(LALT)) A   &mt LCTRL S   &mt LALT D   &mt LGUI F      &mt LSHIFT G       &mt RSHIFT H   &mt RGUI J   &mt RALT K    &mt RCTRL L  &mt RC(RS(RALT)) P
-  &kp Z   &kp X   &kp C   &kp V      &kp B       &kp N   &kp M  &kp COMMA  &kp DOT  &kp TAB
-                          &mo SYM1  &mt LSHIFT SPACE  &mt RSHIFT ENTER   &mo NAV
+             &kp   Q  &kp W   &kp E   &kp R  &kp T       &kp Y   &kp  U   &kp I     &kp O    &kp P
+             HRML (A, S,      D,      F)     &kp G       &kp H   HRMR(J,  K,        L,       BSPC)   
+             &kp   Z  &kp X   &kp C   &kp V  &kp B       &kp N   &kp  M   &kp COMMA &kp DOT  &kp ENTER
+                                &lt LEF TAB  &kp SPACE   &kp RSHIFT  &lt RIG TAB
             >;
         };
 
-        sym1_layer {
+        left_layer {
             bindings = <
-&kp EXCLAMATION   &kp AT         &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS  &kp COLON  &kp SEMICOLON  &trans
-&mt LC(LS(LALT)) N1   &mt LCTRL N2    &mt LALT N3    &mt LGUI N4  &mt LSHIFT N5    &mt RSHIFT N6    &mt RGUI N7   &mt RALT N8  &mt RCTRL N9  &mt RC(RS(RALT)) N0
-&kp GRAVE   &kp LS(LA(N2)) &kp SLASH  &kp MINUS &kp PLUS  &kp STAR  &kp EQUAL   &kp SQT     &kp DQT        &kp QUESTION
-&trans  &trans  &trans  &trans
+             &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT	 	 &kp CARET  &kp AMPS   &kp SEMI  &kp COLON  &QUESTION
+             HRML (N1,  N2,     N3,       N4)       &kp N5   		 &kp N6     HRMR(N7,   N8, 	 N9, 	    N0)
+             &kp ESC    &kp DQT &kp SQT   &kp MINUS &kp PLUS 		 &kp STAR   &kp EQUAL  &trans    &trans     &kp LS(ENTER)
+                           		  &trans    &trans 		 &trans     &trans
             >;
         };
 
-        nav_layer {
+        right_layer {
             bindings = <
-    &kp ESC  &kp F2 &kp LS(LG(N4))   &kp LS(LC(LG(N4)))  &none         &kp LA(DEL)  &kp LG(LBKT)    &kp UP      &kp LG(RBKT) &kp LA(BACKSPACE)
- &sk LC(LS(LALT))      &sk LCTRL     &sk LALT       &sk LGUI              &sk LSHIFT             &kp DEL      &kp LEFT    &kp DOWN    &kp RIGHT    &kp LS(TAB)
-  &none      &none    &none  &none          &kp C_MUTE          &caps_word         &kp HOME    &none   &kp END      &kp TAB
-                                                &trans             &kp LSHIFT           &trans        &trans
+             &kp TILDE         &kp RBRC        &kp RBKT  &kp RPAR   &BSLH         &kp LA(DEL)  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)  &kp F2
+             HRML (&kp GRAVE,  &kp LBRC        &kp LBKT  &kp LPAR   &FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
+             &kp LT            &kp LS(LA(N2))  &kp GT    &kp UNDER  &kp PIPE	  &kp CAPS     &kp HOME       &kp LA(BSLH)  &kp END       &kp LS(LA(BSLH))
+                                                   &trans   &mt LSHIFT SPACE      &trans       &trans
 
             >;
         };
 
-        sym2_layer {
+        tri_layer {
             bindings = <
-    &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp CARET &kp PIPE  &kp TILDE  &none    &trans
-    &kp LA(BACKSLASH) &kp LBRC       &kp LBKT      &kp LPAR       &kp LT        &kp GT    &kp RPAR        &kp RBKT   &kp RBRC &kp LS(LA(BACKSLASH))
-    &none             &none          &kp BACKSLASH &kp UNDERSCORE &kp LA(N0)    &none     &none           &none      &none    &none 
-                                              &trans        &trans        &trans             &trans
+   	     &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp C_VOL_UP   &kp C_BRI_UP
+             &out OUT_TOG  &bt BT_SEL 0       &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &none       &none        &none       &kp C_VOL_DN   &kp C_BRI_DEC
+             &none             &bt BT_SEL 4   &bt BT_CLR   &bootloader    &reset         &reset      &bootloader  &none       &kp C_MUTE     &none
+                                              &trans        &trans        &trans         &trans
             >;
         };
 
-        settings_layer {
+        reserve_layer {
             bindings = <
-  &bootloader  &none         &none         &none         &none            &none   &none   &none   &none  &bootloader
-  &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &none   &none   &none   &none  &bt BT_CLR
-  &reset       &none         &none         &none         &none            &none   &none   &none   &none  &reset
-                                           &trans        &trans           &trans  &trans
+  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+  	                                     &trans    &trans     &trans    &trans
             >;
         };
     };
