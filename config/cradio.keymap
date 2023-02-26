@@ -94,29 +94,29 @@
 
         right_layer {
             bindings = <
-             &kp TILDE         &kp RBRC        &kp RBKT  &kp RPAR   &BSLH    &kp LA(DEL)  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)   &kp F2
-             &kp GRAVE &kp LBRC    &kp LBKT &kp LPAR   &kp FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
-             &kp LT  &kp LS(LA(N2))  &kp GT    &kp UNDER  &kp PIPE      &kp CAPS     &kp HOME       &kp LA(BSLH)  &kp END       &kp LS(LA(BSLH))
-                                                   &trans   &mt LSHIFT SPACE      &trans       &trans
+   &kp TILDE &kp RBRC &kp RBKT &kp RPAR &kp BSLH        &kp LA(DEL) &kp LG(LBKT) &kp UP      &kp LG(RBKT) &kp F2
+   &kp GRAVE &kp LBRC &kp LBKT &kp LPAR &kp FSLH        &kp DEL     &kp LEFT     &kp DOWN    &kp RIGHT    &kp LA(BSPC)
+   &kp LT    &kp LS(LA(N2)) &kp GT &kp UNDER &kp PIPE   &kp CAPS    &kp HOME     &kp LA(BSLH) &kp END     &kp LS(LA(BSLH))
+                                                   &trans   &mt LSHIFT SPACE     &trans      &trans
             >;
         };
 
-        tri_layer {
-            bindings = <
-   	     &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp C_VOL_UP   &kp C_BRI_UP
-             &out OUT_TOG  &bt BT_SEL 0       &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &none       &none        &none       &kp C_VOL_DN   &kp C_BRI_DEC
-             &none             &bt BT_SEL 4   &bt BT_CLR   &bootloader    &reset         &reset      &bootloader  &none       &kp C_MUTE     &none
-                                              &trans        &trans        &trans         &trans
-            >;
-        };
-
-        reserve_layer {
-            bindings = <
-  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
-  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
-  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
-  	                                     &trans    &trans     &trans    &trans
-            >;
-        };
+//        tri_layer {
+//            bindings = <
+//   	     &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp C_VOL_UP   &kp C_BRI_UP
+//             &out OUT_TOG  &bt BT_SEL 0       &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &none       &none        &none       &kp C_VOL_DN   &kp C_BRI_DEC
+//             &none             &bt BT_SEL 4   &bt BT_CLR   &bootloader    &reset         &reset      &bootloader  &none       &kp C_MUTE     &none
+//                                              &trans        &trans        &trans         &trans
+//            >;
+//        };
+//
+//        reserve_layer {
+//            bindings = <
+//  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+//  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+//  	     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR     &kp STAR  &kp STAR  &kp STAR  &kp STAR  &kp STAR
+//  	                                     &trans    &trans     &trans    &trans
+//            >;
+//        };
     };
 };
