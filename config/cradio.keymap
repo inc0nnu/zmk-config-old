@@ -77,7 +77,7 @@
 	default_layer {
             bindings = <
              &kp   Q  &kp W   &kp E   &kp R  &kp T       &kp Y   &kp  U   &kp I     &kp O    &kp P
-             HRML (A, S,      D,      F)     &kp G       &kp H   HRMR(J,  K,        L,       BSPC)   
+             &kp A &kp S &kp D  &kp F   &kp G    &kp H   &kp J  &kp  K    &kp  L  &kp  BSPC  
              &kp   Z  &kp X   &kp C   &kp V  &kp B       &kp N   &kp  M   &kp COMMA &kp DOT  &kp ENTER
                                 &lt LEF TAB  &kp SPACE   &kp RSHIFT  &lt RIG TAB
             >;
@@ -86,7 +86,7 @@
         left_layer {
             bindings = <
              &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT	  &kp CARET  &kp AMPS   &kp SEMI  &kp COLON  &QUESTION
-             HRML(N1,  N2,     N3,       N4)       &kp N5   	 &kp N6     HRMR(N7, N8, N9, N0)
+             &kp N1 &kp  N2  &kp  N3     &kp  N4       &kp N5   	 &kp N6  &kp  N7 &kp N8 &kp N9 &kp N0 
              &kp ESC    &kp DQT &kp SQT   &kp MINUS &kp PLUS 	 &kp STAR   &kp EQUAL  &trans    &trans     &kp LS(ENTER)
                            		  &trans    &trans 	 &trans     &trans
             >;
@@ -95,7 +95,7 @@
         right_layer {
             bindings = <
              &kp TILDE         &kp RBRC        &kp RBKT  &kp RPAR   &BSLH         &kp LA(DEL)  &kp LG(LBKT)   &kp UP        &kp LG(RBKT)  &kp F2
-             HRML (GRAVE,  LBRC,        LBKT,  LPAR)   &kp FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
+             &kp GRAVE &kp LBRC    &kp LBKT &kp LPAR   &kp FSLH         &kp DEL      &kp LEFT       &kp DOWN      &kp RIGHT     &kp LA(BSPC)
              &kp LT            &kp LS(LA(N2))  &kp GT    &kp UNDER  &kp PIPE	  &kp CAPS     &kp HOME       &kp LA(BSLH)  &kp END       &kp LS(LA(BSLH))
                                                    &trans   &mt LSHIFT SPACE      &trans       &trans
 
