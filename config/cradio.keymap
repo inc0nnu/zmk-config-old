@@ -76,8 +76,8 @@
         
 	default_layer {
             bindings = <
-             &kp   Q  &kp W   &kp E   &kp R  &kp T       &kp Y   &kp  U   &kp I     &kp O    &kp P
-             HRML(A,S,D,F)   &kp G    &kp H  HRMR(J,  K,  L,  BSPC)  
+             &kp   Q  &kp W   &kp E   &kp R  &kp T       &kp Y   &kp  U   &kp I     &kp O    &kp BSPC
+             HRML(A,S,D,F)   &kp G    &kp H  HRMR(J,  K,  L,  P)
              &kp   Z  &kp X   &kp C   &kp V  &kp B       &kp N   &kp  M   &kp COMMA &kp DOT  &kp ENTER
                                 &lt LEF TAB  &kp SPACE   &kp RSHIFT  &lt RIG TAB
             >;
@@ -94,8 +94,8 @@
 
         right_layer {
             bindings = <
-   &kp TILDE &kp RBRC &kp RBKT &kp RPAR &kp BSLH        &kp LA(DEL) &kp LG(LBKT) &kp UP      &kp LG(RBKT) &kp F2
-   HRML(GRAVE, LBRC, LBKT, LPAR)  &kp FSLH        &kp DEL     &kp LEFT     &kp DOWN    &kp RIGHT    &kp LA(BSPC)
+   &kp TILDE &kp RBRC &kp RBKT &kp RPAR &kp BSLH        &kp LA(DEL) &kp LG(LBKT) &kp UP      &kp LG(RBKT) &kp LA(BSPC)
+   HRML(GRAVE, LBRC, LBKT, LPAR)  &kp FSLH        &kp DEL     &kp LEFT     &kp DOWN    &kp RIGHT    &kp F2
    &kp LT    &kp LS(LA(N2)) &kp GT &kp UNDER &kp PIPE   &kp CAPS    &kp HOME     &kp LA(BSLH) &kp END     &kp LS(LA(BSLH))
                                                    &trans   &mt LSHIFT SPACE     &trans      &trans
             >;
@@ -104,7 +104,7 @@
         tri_layer {
             bindings = <
    	     &kp LA(N)         &kp LA(GRAVE)  &kp LA(E)     &kp LA(U)      &kp LA(I)     &kp C_PREV  &kp C_PP     &kp C_NEXT  &kp C_VOL_UP   &kp C_BRI_UP
-             &out OUT_TOG  &bt BT_SEL 0       &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &none       &none        &none       &kp C_VOL_DN   &kp C_BRI_DEC
+             &out OUT_TOG  &bt BT_SEL 0       &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3   &none       &kp LS(LG(N4))  &none    &kp C_VOL_DN   &kp C_BRI_DEC
              &none             &bt BT_SEL 4   &bt BT_CLR   &bootloader    &reset         &reset      &bootloader  &none       &kp C_MUTE     &none
                                               &trans        &trans        &trans         &trans
             >;
