@@ -11,11 +11,12 @@
 #define HRMR(k1,k2,k3,k4,k5) &ht RSHIFT k1 &ht RGUI k2  &ht LALT k3 &ht RCTRL k4 &ht RC(RS(RALT)) k5
 
 // Layer definitions
-#define QWE  0
-#define LEF  1
-#define RIG  2
-#define TRI  3
-#define NAV  4
+#define L1  0
+#define L2  1
+#define L3  2
+#define L4  3
+#define L5  4
+#define L6  5
 
 &caps_word {
     continue-list = <UNDERSCORE MINUS>;
@@ -54,9 +55,10 @@
    conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <LEF RIG>;
-            then-layer = <TRI>;
+            if-layers = <L3 L2>;
+            then-layer = <L4>;
         };
+// hier komt de tweede tri-layer
     };
 
     combos {
@@ -76,28 +78,37 @@
         
 	default_layer {
             bindings = <
-             &kp   Q  &kp W   &kp E   &kp R  &kp T       &kp Y   &kp  U   &kp I     &kp O    &kp BSPC
-             HRML(A, S, D, F, G)    HRMR(H, J,  K,  L,  P)
-             &kp Z  &kp X   &kp C   &kp V  &kp B       &kp N   &kp  M   &kp COMMA &kp DOT  &kp ENTER
-                                &mo LEF  &kp SPACE   &kp RSHIFT  &mo RIG
+             &kp Q  &kp W   &kp E   &kp R  &kp T      &kp Y     kp U   &kp I     &kp O    &kp BSPC
+             HRML(A,    S,      D,      F,     G)    HRMR(H,       J,      K,        L,       P)
+             &kp Z  &kp X   &kp C   &kp V  &kp B      &kp N    &kp M   &kp COMMA &kp DOT  &kp ENTER
+                                &mo L3  &kp SPACE   &mo L2  &mo L6
             >;
         };
-
-	left_layer {
-            bindings = < 
-             &kp ESC  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT	  &kp TAB  &kp AMPS   &kp SEMI  &kp COLON  &kp BSPC
-             HRML(N1, N2, N3, N4, N5)    	  HRMR(N6, N7, N8, N9, N0) 
-             &none    &kp BSLH &kp FSLH  &kp MINUS &kp PLUS 	 &kp STAR   &kp EQUAL  &kp COMMA    &kp DOT    &kp ENTER
-                           		  &trans    &trans 	 &trans     &trans
-            >;
-        };
-
-        right_layer {
+	
+        shift_layer {
             bindings = <
-   		&kp ESC  &kp RBRC &kp LBRC &kp TILDE &kp GRAVE       &kp TAB  &to NAV  &kp LBKT  &kp RBKT  &kp BSPC
-   		HRML(LG(N1), LG(N2), QMARK, EXCL, LS(LA(N2)))  	     HRMR(DEL, LS(LA(LEFT)), LPAR, RPAR, F2)
+             &kp LS(Q)  &kp LS(W)   &kp LS(E)   &kp LS(R)  &kp LS(T)      &kp LS(Y)     kp LS(U)   &kp LS(I)     &kp LS(O)    &kp BSPC
+             HRML(RS(A),  RS(S),   RS(D),  RS(F),  RS(G))    HRMR(LS(H),       J,      K,        L,       P)
+             &kp Z  &kp X   &kp C   &kp V  &kp B      &kp N    &kp M   &kp LPAR &kp RPAR  &kp ENTER
+                                &trans  &trans   &trans  &none
+            >;
+        };
+
+	symbol_layer {
+            bindings = < 
+             &kp ESC  &kp AT  &kp HASH  &kp QMARK  &kp EXCL	  &kp TAB  &kp AMPS   &kp SEMI  &kp COLON  &kp BSPC
+             HRML(N1, N2, N3, N4, N5)    	  HRMR(N6, N7, N8, N9, N0) 
+             &to L5    &kp DQT  &kp SQT  &kp MINUS &kp PLUS 	 &kp STAR   &kp EQUAL  &kp COMMA    &kp DOT    &kp ENTER
+                           		  &trans    &trans 	 &trans     &mo L6
+            >;
+        };
+
+        shiftsymbol_layer {
+            bindings = <
+   		&kp TILDE  &kp GRAVE &none &kp DLLR  &kp PRCNT       &kp TAB  &kp CARET  &kp LBRC  &kp RBRC  &kp BSPC
+   		HRML(LG(N1), LG(N2), QMARK, EXCL, LS(LA(N2)))  	     HRMR(DEL, LS(LA(LEFT)), LBKT, RBKT, F2)
    		&tog RIG  &kp LA(BSLH) &kp LS(LA(BSLH)) &kp UNDER &kp PIPE      &kp STAR  &kp EQUAL  &kp SQT &kp DQT  &kp ENTER
-                                                   &trans   &trans     &trans      &trans
+                                                   &trans   &trans     &trans      &none
             >;
         };
 
