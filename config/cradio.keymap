@@ -207,7 +207,7 @@
     mac_symbol2_layer {
         bindings = <
    	    	&kp LA(N)  &kp LA(GRAVE) &kp LA(E) &kp LA(U) &kp LA(I)       &none  &kp CARET  &none  &none  &kp BSPC
-   		    HRMLM(LPAR, LBRC, LT, LBKT, LA(BSLH))  	   HRMR(LS(LA(BSLH)), RBKT, GT, RBRC, RBRC)
+   		    HRMLM(LPAR, LBRC, LT, LBKT, LA(BSLH))  	   HRMRM(LS(LA(BSLH)), RBKT, GT, RBRC, RPAR)
    		    &kp TILDE  &kp GRAVE &kp DLLR &kp UNDER &kp PIPE    &none &none  &kp BSLH  &none &none
                                        &mo MACNUM   &none     &mo MACSHIFT   &none
             >;
