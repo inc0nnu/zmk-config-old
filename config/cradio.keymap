@@ -63,19 +63,19 @@
 
    conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_layer1 {
             if-layers = <WINNUM WINSHIFT>;
             then-layer = <WINSYM2>;
         };
     
        compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_layer2 {
             if-layers = <MACNUM MACSHIFT>;
             then-layer = <MACSYM2>;
         };
 
        compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_layer3 {
             if-layers = <MACNUM MACCMSH>;
             then-layer = <MACSYM2>;
         };
