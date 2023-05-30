@@ -146,7 +146,7 @@
    	    	&none  &none &none &none  &none       &none  &kp CARET  &none  &none  &kp BSPC
    		    HRMLW(LPAR, LBRC, LT , LBKT, LA(BSLH))    HRMRW(LS(LA(BSLH)), RBKT, GT, RBRC, RPAR)
    		    &kp TILDE  &kp GRAVE  &kp DLLR &kp UNDER &kp PIPE    &none &none &kp BSLH  &none &none
-                                 &WINNUM   &none &WINSHIFT  &none
+                                 &mo WINNUM   &none &mo WINSHIFT  &none
             >;
         };
 
@@ -191,7 +191,7 @@
              &kp RS(Q)  &kp RS(W)   &kp RS(E)   &kp RS(R)  &kp RS(T)      &kp LS(Y)    &kp LS(U)   &kp LS(I)     &kp LS(O)    &kp BSPC
              HRMLM(RS(A),  RS(S),   RS(D),  RS(F),  RS(G))    HRMRM(LS(H),   LS(J),  LS(K),   LS(L),  LS(P))
              &kp RS(Z)  &kp RS(X)   &kp RS(C)   &kp RS(V)  &kp RS(B)      &kp LS(N)    &kp LS(M)   &kp FSLH &smijl  &kp LS(ENTER)
-                                &mo MACNUM  &SPACE   &MACSHIFT  &none
+                                &mo MACNUM  &kp SPACE   &mo MACSHIFT  &none
             >;
         };
 
@@ -200,7 +200,7 @@
              &kp RS(Q)  &kp RS(W)   &kp RS(F)   &kp RS(P)  &kp RS(B)      &kp LS(J)    &kp LS(L)   &kp LS(U)     &kp LS(Y)    &kp BSPC
              HRMLM(RS(A),  RS(R),   RS(S),  RS(T),  RS(G))    HRMRM(LS(M),   LS(N),  LS(E),   LS(I),  LS(O))
              &kp RS(Z)  &kp RS(X)   &kp RS(C)   &kp RS(D)  &kp RS(V)      &kp LS(K)    &kp LS(H)   &kp FSLH &smijl  &kp LS(ENTER)
-                                &mo MACNUM  &SPACE   &MACCMSH  &none
+                                &mo MACNUM  &kp SPACE   &mo MACCMSH  &none
             >;
         };
 
@@ -209,7 +209,7 @@
    	    	&kp LA(N)  &kp LA(GRAVE) &kp LA(E) &kp LA(U) &kp LA(I)       &none  &kp CARET  &none  &none  &kp BSPC
    		    HRMLM(LPAR, LBRC, LT, LBKT, LA(BSLH))  	   HRMR(LS(LA(BSLH)), RBKT, GT, RBRC, RBRC)
    		    &kp TILDE  &kp GRAVE &kp DLLR &kp UNDER &kp PIPE    &none &none  &kp BSLH  &none &none
-                                       &MACNUM   &none     &MACSHIFT   &none
+                                       &mo MACNUM   &none     &mo MACSHIFT   &none
             >;
         };
 
@@ -218,7 +218,7 @@
    	    &kp LG(Q)  &kp F2 &none  &none  &kp LG(R)    &kp TAB  &kp LG(LBKT)    &kp UP  &kp LG(RBKT)  &kp LA(BSPC) 
         &kp LSHIFT  &kp LCTRL     &kp LALT   &kp LGUI   &kp LC(LS(LALT))    &kp DEL  &kp LEFT   &kp DOWN   &kp RIGHT   &kp LA(UP)
         &none    &none   &none  &kp(RG(RS(4)))  &none     &none  &kp LG(LEFT)   &none      &kp LG(RIGHT)    &LA(DOWN)
-                                              &to DFLT     &kp SPACE        &none       &mo MACNAV
+                           &to DFLT     &kp SPACE        &none       &mo MACNAV
         >;
     };
 };
