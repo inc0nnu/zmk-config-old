@@ -217,7 +217,7 @@
         bindings = <
    	    &kp LG(Q)  &kp F2 &none  &none  &kp LG(R)    &kp TAB  &kp LG(LBKT)    &kp UP  &kp LG(RBKT)  &kp LA(BSPC) 
         &kp LSHIFT  &kp LCTRL     &kp LALT   &kp LGUI   &kp LC(LS(LALT))    &kp DEL  &kp LEFT   &kp DOWN   &kp RIGHT   &kp LA(UP)
-        &none    &none   &none  &kp(RG(RS(4)))  &none     &none  &kp LG(LEFT)   &none      &kp LG(RIGHT)    &LA(DOWN)
+        &none    &none   &none  &kp RG(RS(4))  &none     &none  &kp LG(LEFT)   &none      &kp LG(RIGHT)    &kp LA(DOWN)
                            &to DFLT     &kp SPACE        &none       &mo MACNAV
         >;
     };
