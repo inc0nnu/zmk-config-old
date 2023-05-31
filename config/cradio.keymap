@@ -152,7 +152,7 @@
 
         windows_nav_layer {
             bindings = <
-   	        &kp LA(F4)  &kp F2   &none  &none  &kp F5   &kp TAB  &kp LC(LEFT)    &kp UP  &kp LC(RIGHT)  &kp LC(BSPC) 
+   	        &kp ESC  &kp F2   &none  &kp LA(F4)  &kp F5   &kp TAB  &kp LC(LEFT)    &kp UP  &kp LC(RIGHT)  &kp LC(BSPC) 
             &kp LSHIFT  &kp LGUI   &kp LALT  &kp LCTRL  &kp LC(LS(LALT))   &kp DEL      &kp LEFT   &kp DOWN   &kp RIGHT   &kp PG_UP
             &none       &none   &none   &kp LS(LG(S))    &none      &none  &kp HOME   &none    &kp END    &kp PG_DN
                                               &to DFLT   &kp SPACE    &none    &mo WINNAV
@@ -213,11 +213,11 @@
             >;
         };
 
-    nav_layer {
+    mac_nav_layer {
         bindings = <
-   	    &kp LG(Q)  &kp F2 &none  &none  &kp LG(R)    &kp TAB  &kp LG(LBKT)    &kp UP  &kp LG(RBKT)  &kp LA(BSPC) 
+   	    &kp ESC  &kp F2 &none  &kp LG(Q)  &kp LG(R)    &kp TAB  &kp LG(LBKT)    &kp UP  &kp LG(RBKT)  &kp LA(BSPC) 
         &kp LSHIFT  &kp LCTRL     &kp LALT   &kp LGUI   &kp LC(LS(LALT))    &kp DEL  &kp LEFT   &kp DOWN   &kp RIGHT   &kp LA(UP)
-        &none    &none   &none  &kp RG(RS(4))  &none     &none  &kp LG(LEFT)   &none      &kp LG(RIGHT)    &kp LA(DOWN)
+        &none    &none   &none  &kp RG(RS(N4))  &none     &none  &kp LG(LEFT)   &none      &kp LG(RIGHT)    &kp LA(DOWN)
                            &to DFLT     &kp SPACE        &none       &mo MACNAV
         >;
     };
