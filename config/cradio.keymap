@@ -110,7 +110,7 @@
         bindings = <
    	    	&kp LA(N)  &kp LA(GRAVE) &kp LA(E) &kp LA(U) &kp LA(I)       &none &kp CARET  &none  &none  &kp BSPC
    		    HRMLM(LA(BSLH), LBRC, LT, LBKT, LPAR)  	   HRMRM(RPAR, RBKT, GT, RBRC, LS(LA(BSLH)))
-   		    &kp TILDE  &kp GRAVE &kp DLLR &kp UNDER &kp PIPE    &none &none  &BSLH  &smijl &none
+   		    &kp TILDE  &kp GRAVE &kp DLLR &kp UNDER &kp PIPE    &none &none  &kp BSLH  &smijl  &none
                                        &mo 1   &none     &mo 2   &none
             >;
         };
