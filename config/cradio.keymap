@@ -93,7 +93,7 @@
         bindings = < 
         &kp HASH &kp N7  &kp N8  &kp N9  &kp FSLH	 &kp TAB  &kp COLON   &kp SEMI  &kp AT  &kp BSPC
         HRMLM(N0, N4, N5, N6, LPAR)    	  HRMRM(RPAR, MINUS, QMARK, EXCL, AMPS) 
-        &kp PERC   &kp N1  &kp N2  &kp N3 &kp PLUS     &kp STAR  &kp EQUAL  &kp COMMA  &kp DOT  &kp ENTER
+        &kp PERCENT   &kp N1  &kp N2  &kp N3 &kp PLUS     &kp STAR  &kp EQUAL  &kp COMMA  &kp DOT  &kp ENTER
                     &mo 1    &none 	 &mo 2   &none
             >;
         };
